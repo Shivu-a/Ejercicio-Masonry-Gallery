@@ -1,0 +1,152 @@
+:root {
+  --main-color: gold;
+  --secondary-color: rgb(253, 133, 247);
+  --auxiliary-color: #1e1e1e;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--auxiliary-color);
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+}
+
+body {
+  background-color: var(--auxiliary-color);
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: min-content;
+  height: 100vh;
+  margin: auto;
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.container {
+  display: grid;
+  height: 80vh;
+  grid-template-columns: repeat(6, 45px);
+  grid-template-rows: repeat(12, 45px);
+  gap: 20px;
+}
+
+.imagen {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  transition: all 250ms;
+}
+
+.imagen:hover {
+  transform: scale(1.05);
+}
+
+#imagen-1 {
+  grid-column: span 6;
+  grid-row: span 3;
+}
+
+#imagen-3 {
+  grid-column: span 2;
+  grid-row: span 4;
+}
+
+#imagen-2 {
+  grid-column: span 4;
+  grid-row: span 6;
+}
+
+#imagen-4 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+#imagen-5 {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+
+#imagen-6 {
+  grid-column: span 3;
+  grid-row: span 9;
+}
+#imagen-7 {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+#imagen-8 {
+  grid-column: span 3;
+  grid-row: span 7;
+}
+#imagen-9 {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+
+#imagen-10 {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+
+#imagen-11 {
+  grid-column: span 1;
+}
+
+#imagen-12 {
+  grid-column: span 5;
+  grid-row: span 1;
+}
+
+#imagen-13 {
+  grid-column: span 6;
+  grid-row: span 7;
+}
+
+#imagen-14 {
+  grid-column: span 6;
+  grid-row: span 1;
+}
+
+.divEjemplos h2 {
+  color: var(--main-color);
+  text-align: center;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.ejemplo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 60px;
+  align-items: center;
+}
+
+.ejemplo img {
+  padding: 10px;
+  max-width: 100%;
+  border-radius: 15px;
+  border: 2px solid var(--secondary-color);
+}
